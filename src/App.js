@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import * as Minesweeper from '../minesweeper';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    const board = new Minesweeper.Board(9, 10);
+    this.state = { board: board };
+  }
+  restartGame = () => {};
+  updateGame = () => {};
+
+  render() {
+    return <div className="App"></div>;
+  }
 }
 
 export default App;
